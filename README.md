@@ -75,13 +75,11 @@ Allows users to use SQL database to manage pets information
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need [PostgreSQL](
+In order to run this project you need [PostgreSQL](https://www.postgresql.org/) intalled, [git](https://git-scm.com/downloads) and a text editor like [Visual Studio Code](https://code.visualstudio.com/download)
 
 ### Setup
 Clone this repository to your desired folder:
@@ -105,28 +103,12 @@ Example command:
 
 ### Usage
 
-To run the project, execute the following command:
-
-```sh
-  rails server
-```
-
-
-### Run tests
-
-To run tests, run the following command:
+To run the project, copy and paste the schema file lines of code in your PostgreSQL terminal.
+Not sure how to use PostgreSQL? Check this [introduction](https://www.youtube.com/watch?v=ezjoDYs72GA&t=977s)
 
 ### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+This project is a database, you could interact with the database using commands like: INSERT, SELECT, DELETE, etc.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,14 +121,10 @@ Example:
 👤 **Oscar Fernandez Muñoz**
 
 - GitHub: [@oscarfmdev](https://github.com/oscarfmdev)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- Twitter: [@oscarfmdev](https://twitter.com/oscarfmdev)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/oscarfmdev)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
