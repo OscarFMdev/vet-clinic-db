@@ -10,26 +10,31 @@ SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
 
 
 /* SECOND PART */
-BEGIN;
 
+/* digimon and pokemon species */
+UPDATE animals SET species = 'digimon' WHERE pet_name LIKE '%on';
+UPDATE animals SET species = 'pokemon' WHERE pet_name NOT LIKE '%on';
+
+
+/* inside a transaction */
+BEGIN;
 DELETE FROM animals
 WHERE date_of_birth > '2022-01-01';
-
 SAVEPOINT SP1;
-
-UPDATE animals
-SET weight_kg = weight_kg * -1;
-
+UPDATE animals SET weight_kg = weight_kg * -1;
 ROLLBACK TO SAVEPOINT SP1;
-
 UPDATE animals
-SET weight_kg = weight_kg * -1
-WHERE weight_kg < 0;
-
+SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 COMMIT;
+/* end of transaction*/
 
+/* deleting and restoring transaction */
+BEGIN;
+DELETE FROM animals;
+ROLLBACK;
+/*end of transaction */
 
-/* QUESTIONS */
+/* QUESTIONS TO QUERIES*/
 /* How many animals are there? */
 SELECT COUNT(*) FROM animals;
 
