@@ -1,14 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -43,7 +34,7 @@
 
 
 <details>
-  <summary>Client</summary>
+  <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
@@ -84,83 +75,40 @@ Allows users to use SQL database to manage pets information
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+In order to run this project you need [PostgreSQL](https://www.postgresql.org/) intalled, [git](https://git-scm.com/downloads) and a text editor like [Visual Studio Code](https://code.visualstudio.com/download)
 
 ### Setup
-
 Clone this repository to your desired folder:
-
-<!--
-Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/OscarFMdev/vet-clinic-db.git
 ```
---->
+
 
 ### Install
 
 Install this project with:
 
-<!--
 Example command:
 
 ```sh
   cd my-project
   gem install
 ```
---->
 
 ### Usage
 
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+To run the project, copy and paste the schema file lines of code in your PostgreSQL terminal.
+Not sure how to use PostgreSQL? Check this [introduction](https://www.youtube.com/watch?v=ezjoDYs72GA&t=977s)
 
 ### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+This project is a database, you could interact with the database using commands like: INSERT, SELECT, DELETE, etc.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,14 +121,10 @@ Example:
 👤 **Oscar Fernandez Muñoz**
 
 - GitHub: [@oscarfmdev](https://github.com/oscarfmdev)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- Twitter: [@oscarfmdev](https://twitter.com/oscarfmdev)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/oscarfmdev)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
