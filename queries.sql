@@ -15,6 +15,11 @@ SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
 UPDATE animals SET species = 'digimon' WHERE pet_name LIKE '%on';
 UPDATE animals SET species = 'pokemon' WHERE pet_name NOT LIKE '%on';
 
+/* deleting and restoring transaction */
+BEGIN;
+DELETE FROM animals;
+ROLLBACK;
+/*end of transaction */
 
 /* inside a transaction */
 BEGIN;
@@ -28,11 +33,6 @@ SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 COMMIT;
 /* end of transaction*/
 
-/* deleting and restoring transaction */
-BEGIN;
-DELETE FROM animals;
-ROLLBACK;
-/*end of transaction */
 
 /* QUESTIONS TO QUERIES*/
 /* How many animals are there? */
