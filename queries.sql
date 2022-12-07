@@ -33,23 +33,38 @@ SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 COMMIT;
 /* end of transaction*/
 
-
 /* QUESTIONS TO QUERIES*/
 /* How many animals are there? */
 SELECT COUNT(*) FROM animals;
-
 /* How many animals have never tried to escape? */
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
-
 /* What is the average weight of animals? */
 SELECT AVG(weight_kg) FROM animals;
-
-
 /* Who escapes the most, neutered or not neutered animals? */
 SELECT SUM(escape_attempts) FROM animals GROUP BY neutered;
-
 /* What is the minimum and maximum weight of each type of animal? */
 SELECT species, MAX(weight_kg), MIN(weight_kg) FROM animals GROUP BY species;
-
 /* What is the average number of escape attempts per animal type of those born between 1990 and 2000? */
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
+
+
+/* THIRD SECTION */
+/* All animals from Melody Pond*/
+SELECT animals.pet_name, owners.full_name FROM animals JOIN owners ON animals.owners_id = owners.id AND owners.full_name = 'Melody Pond';
+/*ALL pokemons*/
+SELECT animals.pet_name, species.name FROM animals JOIN species ON  animals.species_id = species.id AND species.name = 'pokemon';
+
+/* All owners and their animals*/
+SELECT animals.pet_name, owners.full_name FROM animals RIGHT JOIN owners ON animals.owners_id = owners.id;
+
+/* Count by species*/
+SELECT species.name, COUNT(species.name)  FROM species JOIN animals ON animals.species_id = species.id GROUP BY species.name;
+
+/* All digimons from Jennifer Orwell */
+SELECT animals.pet_name, owners.full_name, species.name FROM animals JOIN owners ON animals.owners_id = owners.id AND owners.full_name = 'Jennifer Orwell' JOIN species ON animals.species_id = species.id AND species.name = 'digimon';
+
+/* All animals from Dean which tried to escape */
+SELECT animals.pet_name, owners.full_name FROM animals JOIN owners ON animals.owners_id = owners.id AND owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0;
+
+/**/
+SELECT COUNT(animals.pet_name), owners.full_name FROM animals JOIN owners ON animals.owners_id = owners.id GROUP BY owners.full_name ORDER BY count DESC LIMIT 1;
