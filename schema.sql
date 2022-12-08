@@ -23,7 +23,7 @@ PRIMARY KEY (id)
 /* -------------- */
 
 /* Create species table */
-# CREATE TABLE species(
+CREATE TABLE species(
 id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 name VARCHAR(255)
 );
