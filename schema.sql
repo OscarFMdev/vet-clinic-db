@@ -58,5 +58,5 @@ visit_date DATE
 
 --Optimize queries
 CREATE INDEX animal_id_desc ON visits(animal_id DESC);
-CREATE INDEX vets_id_desc ON visits(vetsl_id DESC);
+CREATE INDEX vet_id_desc ON visits(vet_id DESC);
 CREATE INDEX emails_desc ON owners(email DESC);
