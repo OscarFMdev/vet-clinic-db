@@ -44,6 +44,12 @@ CREATE TABLE invoice_items (
   FOREIGN key (treatment_id) REFERENCES treatments(id)
 );
 
+CREATE TABLE treatments (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  type VARCHAR(100),
+  name VARCHAR(100)
+)
+
 CREATE INDEX ON medical_histories (patient_id);
 CREATE INDEX ON invoices (medical_history_id);
 CREATE INDEX ON invoice_items (invoice_id);
