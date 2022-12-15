@@ -24,10 +24,10 @@ CREATE TABLE invoices (
   FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id)
 );
 
-CREATE TABLE medical_hitories_treatments(
+CREATE TABLE medical_histories_treatments(
   treatments_id INT,
-  medical_hitories_id INT,
-  PRIMARY KEY(treatments_id,medical_hitories_id),
+  medical_histories_id INT,
+  PRIMARY KEY(treatments_id,medical_histories_id),
   FOREIGN key (treatments_id) REFERENCES treatments(id),
   FOREIGN key (medical_histories_id) REFERENCES medical_histories(id)
 );
